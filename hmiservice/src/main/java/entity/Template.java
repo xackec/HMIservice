@@ -5,33 +5,28 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
-import org.eclipse.persistence.oxm.annotations.XmlPath;
-
-import view.View;
-
+/**
+ * Root element of template hierarchy
+ * @author bogomazov.kv
+ *
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "template")
 @XmlRootElement
-
 public class Template {
 	
 	@XmlElementWrapper(name = "resources")
 	@XmlElement(name = "resource")
 	List<Resource> resources = new ArrayList<Resource>();
 	
-	@XmlElementWrapper(name = "view")
-	@XmlElement
-	List<View> views = new ArrayList<View>();
-
-
+	@XmlElement(name = "view")
+	View view = new View();
+	
 	public List<Resource> getResources() {
 		return resources;
 	}
@@ -43,9 +38,15 @@ public class Template {
 	public void addResource(Resource resource) {
 		resources.add(resource);
 	}
-	
-	public void addView(View view) {
-		views.add(view);
+
+	public View getView() {
+		return view;
 	}
+
+	public void setView(View view) {
+		this.view = view;
+	}
+	
+	
 
 }

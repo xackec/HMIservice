@@ -2,10 +2,14 @@ package entity;
 
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlAccessType;
 
+/**
+ * Resource template mapping
+ * @author bogomazov.kv
+ *
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "resource")
 public class Resource {
@@ -15,6 +19,10 @@ public class Resource {
 	
 	@XmlAttribute
 	public String parent;
+	
+	public Resource() {
+		
+	}
 	
 	public Resource(String id, String parent) {
 		this.id = id;

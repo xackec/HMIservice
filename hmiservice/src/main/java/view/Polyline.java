@@ -13,6 +13,9 @@ import javax.xml.bind.annotation.XmlValue;
 
 import org.eclipse.persistence.oxm.annotations.XmlPath;
 
+import viewutils.Record;
+import viewutils.Stroke;
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "polyline")
 public class Polyline extends Plot{
@@ -38,6 +41,8 @@ public class Polyline extends Plot{
 	}
 
 	String height;
+	
+	String width;
 	
     String foreground;
     
@@ -132,70 +137,4 @@ public class Polyline extends Plot{
 	public String toString() {
 		return null;
 	}
-	
-	@XmlAccessorType(XmlAccessType.FIELD)
-	static class Record{
-		
-		public String x = "0.0";
-		
-		public String y = "0.0";
-		
-		public Record() {
-			
-		}
-		
-		public Record(String x, String y) {
-			this.x = x;
-			this.y = y;
-		}
-		
-	}
-	
-	@XmlAccessorType(XmlAccessType.FIELD)
-	static class ShortRecord{
-		
-		@XmlPath("value/@name")
-		public String name = "dash";
-		
-		@XmlPath("value/text()")
-		public String dash;
-		
-		public ShortRecord() {
-			
-		}
-		
-		public ShortRecord(String dash) {
-			this.dash = dash;
-		}
-		
-		@Override
-		public String toString() {
-			return dash;
-		}
-		
-	}
-	
-	@XmlAccessorType(XmlAccessType.FIELD)
-	static class Stroke{
-		
-		public String lineWidth;
-		
-		public String endCap;
-		
-		@XmlPath("dashArray/table/records/record")
-	    public List<ShortRecord> points = new ArrayList<ShortRecord>();
-		
-		public Stroke() {
-			this.lineWidth = "2.0";
-			this.endCap = "0";
-			this.points.add(new ShortRecord("15.0"));
-			this.points.add(new ShortRecord("5.0"));
-		}
-		
-		public void addShort(String dash) {
-			points.add(new ShortRecord(dash));
-		}
-		
-	}
-
 }

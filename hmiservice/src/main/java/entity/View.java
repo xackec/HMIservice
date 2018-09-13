@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
+import view.Arrow;
+import view.Label;
 import view.Panel;
 import view.Polyline;
 import view.Root;
@@ -28,6 +30,11 @@ public class View {
 	@XmlElement(name = "polyline")
 	List<Polyline> lines = new ArrayList<Polyline>();
 
+	@XmlElement(name = "label")
+	List<Label> labels = new ArrayList<Label>();
+	
+	@XmlElement(name = "arrow")
+	List<Arrow> arrows = new ArrayList<Arrow>();
 	
 	public void addRoot(Root root) {
 		this.views.add(root);
@@ -39,6 +46,14 @@ public class View {
 	
 	public void addPolyline(Polyline line) {
 		this.lines.add(line);
+	}
+	
+	public void addLabel(Label label) {
+		this.labels.add(label);
+	}
+	
+	public void addArrow(Arrow arrow) {
+		this.arrows.add(arrow);
 	}
 
 }

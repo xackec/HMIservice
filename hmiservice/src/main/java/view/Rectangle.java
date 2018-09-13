@@ -7,10 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import viewutils.Stroke;
 
-
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "arrow")
-public class Arrow extends Plot{
+@XmlType(name = "rectangle")
+public class Rectangle {
 	
 	String height;
 	
@@ -37,37 +36,16 @@ public class Arrow extends Plot{
     String yCoordinate;
     
     String zOrder;
-    
+	
     @XmlElement(name = "stroke")
     Stroke stroke;
     
-    public Arrow() {
-	}
-    
-    public Arrow(String id) {
-    	super(id);
-    	stroke = new Stroke("0");
+    public Rectangle() {
+    	
     }
     
-    
+    public Rectangle(String id) {
+    	
+    }
 
-	public void setHeight(String height) {
-		this.height = height;
-	}
-
-	public void setWidth(String width) {
-		this.width = width;
-	}
-
-	public void setForeground(String foreground) {
-		this.foreground = foreground;
-	}
-
-	public void setBackground(String background) {
-		this.background = background;
-	}
-
-	public void setOpaque(String opaque) {
-		this.opaque = opaque;
-	}
 }

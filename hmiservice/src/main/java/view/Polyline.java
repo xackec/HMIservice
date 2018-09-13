@@ -133,8 +133,4 @@ public class Polyline extends Plot{
 		this.points.add(new Record(x, y));
 	}
 
-	@Override
-	public String toString() {
-		return null;
-	}
 }

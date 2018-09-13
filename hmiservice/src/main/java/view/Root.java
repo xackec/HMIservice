@@ -110,10 +110,4 @@ public class Root extends Plot{
 	}
 
 
-
-	@Override
-	public String toString() {
-		return "{"+background+"}";
-	}
-
 }

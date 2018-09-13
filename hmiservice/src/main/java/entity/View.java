@@ -8,10 +8,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 import view.Arrow;
+import view.Circle;
 import view.Label;
 import view.Panel;
 import view.Polyline;
 import view.Root;
+import view.Subwidget;
+import view.Vectordrawing;
 
 /**
  * View template mapping
@@ -36,6 +39,15 @@ public class View {
 	@XmlElement(name = "arrow")
 	List<Arrow> arrows = new ArrayList<Arrow>();
 	
+	@XmlElement(name = "subwidget")
+	List<Subwidget> subwidgets = new ArrayList<Subwidget>();
+	
+	@XmlElement(name = "vectorDrawing")
+	List<Vectordrawing> vectordrawings = new ArrayList<Vectordrawing>();
+	
+	@XmlElement(name = "Circle")
+	List<Circle> circles = new ArrayList<Circle>();
+	
 	public void addRoot(Root root) {
 		this.views.add(root);
 	}
@@ -54,6 +66,18 @@ public class View {
 	
 	public void addArrow(Arrow arrow) {
 		this.arrows.add(arrow);
+	}
+	
+	public void addSubwidget(Subwidget subwidget) {
+		this.subwidgets.add(subwidget);
+	}
+	
+	public void addVectordrawing(Vectordrawing vdrawing) {
+		this.vectordrawings.add(vdrawing);
+	} 
+	
+	public void addCircle(Circle circle) {
+		this.circles.add(circle);
 	}
 
 }

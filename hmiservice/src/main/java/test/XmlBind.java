@@ -1,7 +1,10 @@
 package test;
 
+import java.io.File;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import entity.Resource;
 import entity.Template;
@@ -14,6 +17,15 @@ import view.Root;
 public class XmlBind {
 
 	public static void main(String[] args) throws Exception{
+		
+		
+		File file = new File("lpumg.xml");
+		JAXBContext jaxbContext = JAXBContext.newInstance(Template.class);
+
+		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+		Template customer = (Template) jaxbUnmarshaller.unmarshal(file);
+		
+		
 		JAXBContext jc = JAXBContext.newInstance(entity.Template.class);
 
         Template temp = new Template();

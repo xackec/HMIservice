@@ -33,7 +33,9 @@ public abstract class Plot {
 	
 	
 	
-	public abstract String toString();
+	public String toString() {
+		return this.getClass().getSimpleName() + " " + resourceID;
+	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
 	static class Cursor{

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <resources>
+        <resource id="polyline1" parent="panel1"/>
+        <resource id="label1" parent="panel1"/>
+		<resource id="panel1" parent=""/>
+        <resource id=""/>
+    </resources>
+    <view>
+        <root resourceID="">
+            <background>#F4F8FCFF</background>
+            <cursor contentType="base64">Gg==</cursor>
+            <width>1850</width>
+            <height>1000</height>
+            <startupBindingsConcurrency>1</startupBindingsConcurrency>
+            <normalConcurrentBindings>200</normalConcurrentBindings>
+            <maximumConcurrentBindings>800</maximumConcurrentBindings>
+        </root>
+        <panel resourceID="panel1">
+            <layout>2</layout>
+            <cursor contentType="base64">Gg==</cursor>
+            <fill>1</fill>
+        </panel>
+        <polyline resourceID="polyline1">
+            <height>861</height>
+            <foreground>#FF9900FF</foreground>
+            <cursor contentType="base64">Gg==</cursor>
+            <stroke>
+                <lineWidth>2.0</lineWidth>
+                <endCap>0</endCap>
+                <dashArray>
+                    <table>
+                        <records>
+                            <record>
+                                <value name="dash">15.0</value>
+                            </record>
+                            <record>
+                                <value name="dash">5.0</value>
+                            </record>
+                        </records>
+                    </table>
+                </dashArray>
+            </stroke>
+            <points>
+                <record>
+                    <x>0.0</x>
+                    <y>0.0</y>
+                </record>
+                <record>
+                    <x>1.0</x>
+                    <y>1.0</y>
+                </record>
+            </points>
+            <outerRadius>10.0</outerRadius>
+            <innerRadius>7.0</innerRadius>
+            <angle>15.0</angle>
+            <xCoordinate>11</xCoordinate>
+            <yCoordinate>10</yCoordinate>
+        </polyline>
+        <label resourceID="label1">
+            <cursor contentType="base64">Gg==</cursor>
+            <text>Газпром трансгаз Ухта Шекснинское ЛПУ МГ</text>
+            <iconTextGap>4</iconTextGap>
+            <xCoordinate>22</xCoordinate>
+            <yCoordinate>20</yCoordinate>
+            <zOrder>1</zOrder>
+        </label>
+		    </view>
+    <bindings/>
+    <scripts/>
+</template>

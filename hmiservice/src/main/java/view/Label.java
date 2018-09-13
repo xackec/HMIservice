@@ -71,11 +71,4 @@ public class Label extends Plot{
 	public void setzOrder(String zOrder) {
 		this.zOrder = zOrder;
 	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

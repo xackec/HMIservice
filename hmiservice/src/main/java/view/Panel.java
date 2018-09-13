@@ -26,10 +26,4 @@ public class Panel extends Plot{
 		this.fill = fill;
 	}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
